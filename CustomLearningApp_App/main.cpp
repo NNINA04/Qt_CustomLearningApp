@@ -1,0 +1,89 @@
+//#include "EnglishLearning.h"
+//#include "PhrasesManager_Lib/HandlersExecutioner.h"
+//#include "PhrasesManager_Lib/WhiteSpacesRemover.h"
+//#include "PhrasesManager_Lib/Trimmer.h"
+
+#include "MainWindow.h"
+#include "AddPhraseButton.h"
+
+/*
+using namespace std;
+
+static void PrintWrongAnsweredPhrases(const EnglishLearning::Enumerable& phrases)
+{
+    for (auto& item : phrases)
+        cout << "En: " << item.first
+        << "\tRu: " << item.second << endl;
+}
+*/
+
+size_t allocated = 0;
+
+_NODISCARD _Ret_notnull_ _Post_writable_byte_size_(_Size) _VCRT_ALLOCATOR
+void* __CRTDECL operator new(size_t _Size)
+{
+    allocated += _Size;
+    return malloc(_Size);
+}
+
+void __CRTDECL operator delete(void* obj, size_t size)
+{
+    allocated -= size;
+    qDebug() << allocated;
+    free(obj);
+}
+
+int main(int argc, char* argv[])
+{
+    /*
+    setlocale(LC_ALL, "ru-RU");
+    srand((unsigned int)time(NULL));
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    EnglishLearning::Enumerable phrases
+    {
+        {"I have a few ideas", "У меня есть несколько идей"},
+        {"She has lots of mistakes", "У неё много ошибок"},
+        {"It's far more honest", "Это ГОРАЗДО честнее"},
+        {"For further information follow this link", "Для дальнейшей информации проследуйте по этой ссылке"},
+        {"I started making much fewer mistakes", "Я начал делать намного меньше ошибок"},
+        {"He asked me what her job was", "Он спросил у меня, какая у неё работа"},
+        {"He asked me if I agreed", "Он спросил меня, был ли я согласен"},
+        {"I want to speak English as well as you", "Я хочу говорить по английский также хорошо как и ты"},
+        {"His English level is lower than mine", "Его уровень английского ниже чем мой"},
+        {"He said that he'd done it the day before", "Он сказал что сделал это вчера (Днём ранее)"},
+        {"", ""},
+        {"", ""},
+        {"", ""},
+    };
+
+    HandlersExecutioner<EnglishLearning::Enumerable> hExec;
+    hExec.AddHandler(new Trimmer());
+    hExec.AddHandler(new WhiteSpacesRemover());
+    hExec.Handle(phrases);
+
+    EnglishLearning en(phrases);
+    en.AsksEnglish = false;
+
+    while (en.empty() == false) // Если не закомментировано, то окно не появится
+    {
+        en.AskPhrase();
+        cout << endl;
+    }
+
+    auto& wrongAnswers = en.GetWrongAnsweredPhrases();
+    if (wrongAnswers.empty() == false)
+    {
+        cout << "Press ENTER to see the wrong answers" << endl;
+        cin.get();
+        cout << "The wrong answers:" << endl;
+    }
+    PrintWrongAnsweredPhrases(wrongAnswers);
+    */
+
+    QApplication app(argc, argv);
+    MainWindow englishLearning;
+    englishLearning.show();
+    return app.exec();
+}

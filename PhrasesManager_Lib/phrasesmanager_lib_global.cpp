@@ -1,0 +1,1 @@
+#include "phrasesmanager_lib_global.h"
