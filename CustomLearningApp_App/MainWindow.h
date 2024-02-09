@@ -2,7 +2,7 @@
 
 #include "AddPhraseButton.h"
 #include "StartLearningButton.h"
-#include "LearnedPhrasesList.h"
+#include "InputPhraseAreaListManager.h"
 
 class MainWindow
     : public QWidget
@@ -11,7 +11,7 @@ class MainWindow
 
     QVBoxLayout* _vBoxLayout;
     QPushButton* _startLearningButton;
-    LearnedPhrasesList* _learnedPhrasesList;
+    InputPhraseAreaListManager* _learnedPhrasesListManager;
 public:
     explicit MainWindow(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags())
         : QWidget(parent, f)
@@ -20,15 +20,15 @@ public:
 
         _vBoxLayout = new QVBoxLayout(this);
         _startLearningButton = new StartLearningButton("Start learning", this);
-        _learnedPhrasesList = new LearnedPhrasesList(this);
+        _learnedPhrasesListManager = new InputPhraseAreaListManager(this);
 
         _vBoxLayout->addWidget(_startLearningButton);
-        _vBoxLayout->addWidget(_learnedPhrasesList);
+        _vBoxLayout->addWidget(_learnedPhrasesListManager);
 
         connect(_startLearningButton, SIGNAL(clicked(bool)), this, SLOT(StartLearningButton_Clicked()));
-        
+
         for (size_t i = 0; i < 3; ++i)
-            _learnedPhrasesList->AddLearnedPhrase(new LearnedPhrase());
+            _learnedPhrasesListManager->AddInputPhraseArea(new InputPhraseArea());
     }
 private slots:
     void StartLearningButton_Clicked()

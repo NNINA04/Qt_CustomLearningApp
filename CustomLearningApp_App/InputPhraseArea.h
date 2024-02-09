@@ -1,18 +1,20 @@
 #pragma once
 
 #include "DesignedQTextEdit.h"
-#include "DeletePhraseButton.h"
 #include "DesignedQPushButton.h"
+#include "DeletePhraseButton.h"
 
-class LearnedPhrase
+class InputPhraseArea
     : public QWidget
 {
+    Q_OBJECT;
+
     QHBoxLayout* _hBoxLayout;
-    QTextEdit* _learnedPhrase;
-    QPushButton* _deletePhraseButton;
-    QTextEdit* _translatedPhrase;
+    DesignedQTextEdit* _learnedPhrase;
+    DesignedQPushButton* _deletePhraseButton;
+    DesignedQTextEdit* _translatedPhrase;
 public:
-    LearnedPhrase(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags())
+    InputPhraseArea(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags())
         : QWidget(parent, f)
     {
         _hBoxLayout = new QHBoxLayout(this);
@@ -23,13 +25,14 @@ public:
         _hBoxLayout->addWidget(_learnedPhrase);
         _hBoxLayout->addWidget(_deletePhraseButton);
         _hBoxLayout->addWidget(_translatedPhrase);
-
-        _hBoxLayout->setMargin(0);
         _hBoxLayout->setSpacing(0);
-    }
+        _hBoxLayout->setMargin(0);
 
-    QPushButton* GetDeletePhraseButton() const
+        connect(_deletePhraseButton, SIGNAL(clicked()),this,SLOT(DeletePhraseButton_Clicked()));
+    }
+private slots:
+    void DeletePhraseButton_Clicked() 
     {
-        return _deletePhraseButton;
+        delete this;
     }
 };

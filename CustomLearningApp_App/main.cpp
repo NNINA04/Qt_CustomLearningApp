@@ -4,7 +4,6 @@
 //#include "PhrasesManager_Lib/Trimmer.h"
 
 #include "MainWindow.h"
-#include "AddPhraseButton.h"
 
 /*
 using namespace std;
@@ -19,8 +18,7 @@ static void PrintWrongAnsweredPhrases(const EnglishLearning::Enumerable& phrases
 
 size_t allocated = 0;
 
-_NODISCARD _Ret_notnull_ _Post_writable_byte_size_(_Size) _VCRT_ALLOCATOR
-void* __CRTDECL operator new(size_t _Size)
+void* operator new(size_t _Size)
 {
     allocated += _Size;
     return malloc(_Size);

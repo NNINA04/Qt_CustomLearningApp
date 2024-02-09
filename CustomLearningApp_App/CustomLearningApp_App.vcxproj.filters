@@ -13,54 +13,59 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Translation Files">
-      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
-      <Extensions>ts</Extensions>
-    </Filter>
-    <Filter Include="Header Files\ExtendedBaseObjects">
-      <UniqueIdentifier>{391d1486-26e1-455c-891f-587d477b86af}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Windowses">
-      <UniqueIdentifier>{b4c57832-4635-468e-b987-ea95902c43d7}</UniqueIdentifier>
+      <UniqueIdentifier>{bfac624b-135d-40aa-9d73-ae1b91ee922c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Windowses\Buttons">
-      <UniqueIdentifier>{6e381b9d-4fc0-4396-b228-d1ba7303da99}</UniqueIdentifier>
+    <Filter Include="Header Files\BaseButtons">
+      <UniqueIdentifier>{2ad22327-06a5-4118-8af5-505f47df81ea}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="EnglishLearning.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DesignedQPushButton.h">
-      <Filter>Header Files\ExtendedBaseObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="DesignedQTextEdit.h">
-      <Filter>Header Files\ExtendedBaseObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="AddPhraseButton.h">
-      <Filter>Header Files\Windowses\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="DeletePhraseButton.h">
-      <Filter>Header Files\Windowses\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="StartLearningButton.h">
-      <Filter>Header Files\Windowses\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="LearnedPhrase.h">
-      <Filter>Header Files\Windowses</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="MainWindow.h">
-      <Filter>Header Files\Windowses</Filter>
-    </QtMoc>
-    <QtMoc Include="LearnedPhrasesList.h">
-      <Filter>Header Files\Windowses</Filter>
-    </QtMoc>
+    <Filter Include="Header Files\Windowses\MainWindow">
+      <UniqueIdentifier>{63d75d77-97a7-463b-b998-8b7b3ed9873d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Windowses\MainWindow\Buttons">
+      <UniqueIdentifier>{f35d5316-b2bf-4559-af9b-10fb1e48bbaa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DesignedQPushButton.h">
+      <Filter>Header Files\BaseButtons</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignedQTextEdit.h">
+      <Filter>Header Files\BaseButtons</Filter>
+    </ClInclude>
+    <ClInclude Include="AddPhraseButton.h">
+      <Filter>Header Files\Windowses\MainWindow\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="DeletePhraseButton.h">
+      <Filter>Header Files\Windowses\MainWindow\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="StartLearningButton.h">
+      <Filter>Header Files\Windowses\MainWindow\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="EnglishLearning.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputPhraseAreaList.h">
+      <Filter>Header Files\Windowses\MainWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrollableInputPhraseAreaList.h">
+      <Filter>Header Files\Windowses\MainWindow</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainWindow.h">
+      <Filter>Header Files\Windowses\MainWindow</Filter>
+    </QtMoc>
+    <QtMoc Include="InputPhraseArea.h">
+      <Filter>Header Files\Windowses\MainWindow</Filter>
+    </QtMoc>
+    <QtMoc Include="InputPhraseAreaListManager.h">
+      <Filter>Header Files\Windowses\MainWindow</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

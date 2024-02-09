@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtSharedPCH", "QtSharedPCH\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PhrasesManager_Lib", "PhrasesManager_Lib\PhrasesManager_Lib.vcxproj", "{05ACCC31-9F44-4B56-98F7-2352E4C26791}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustomLearningApp_App", "CustomLearningApp_App\CustomLearningApp_App.vcxproj", "{C1B8298C-2DC9-4CB4-ABAB-86C39A8D3E23}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustomLearningApp_App", "CustomLearningApp_App\CustomLearningApp_App.vcxproj", "{E72EA5D4-DBD2-4F39-A8D4-095B05AB2648}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{05ACCC31-9F44-4B56-98F7-2352E4C26791}.Debug|x64.Build.0 = Debug|x64
 		{05ACCC31-9F44-4B56-98F7-2352E4C26791}.Release|x64.ActiveCfg = Release|x64
 		{05ACCC31-9F44-4B56-98F7-2352E4C26791}.Release|x64.Build.0 = Release|x64
-		{C1B8298C-2DC9-4CB4-ABAB-86C39A8D3E23}.Debug|x64.ActiveCfg = Debug|x64
-		{C1B8298C-2DC9-4CB4-ABAB-86C39A8D3E23}.Debug|x64.Build.0 = Debug|x64
-		{C1B8298C-2DC9-4CB4-ABAB-86C39A8D3E23}.Release|x64.ActiveCfg = Release|x64
-		{C1B8298C-2DC9-4CB4-ABAB-86C39A8D3E23}.Release|x64.Build.0 = Release|x64
+		{E72EA5D4-DBD2-4F39-A8D4-095B05AB2648}.Debug|x64.ActiveCfg = Debug|x64
+		{E72EA5D4-DBD2-4F39-A8D4-095B05AB2648}.Debug|x64.Build.0 = Debug|x64
+		{E72EA5D4-DBD2-4F39-A8D4-095B05AB2648}.Release|x64.ActiveCfg = Release|x64
+		{E72EA5D4-DBD2-4F39-A8D4-095B05AB2648}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
