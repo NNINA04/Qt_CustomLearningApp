@@ -1,10 +1,10 @@
 #pragma once
 
-class DesignedQScrollArea
+class BasicQScrollArea
     : public QScrollArea
 {
 public:
-    explicit DesignedQScrollArea(QWidget* parent = nullptr)
+    explicit BasicQScrollArea(QWidget* parent = nullptr)
         : QScrollArea(parent)
     {
 

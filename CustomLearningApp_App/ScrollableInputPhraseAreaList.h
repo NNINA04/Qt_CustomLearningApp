@@ -1,15 +1,15 @@
 #pragma once
 
-#include "DesignedQScrollArea.h"
+#include "BasicQScrollArea.h"
 #include "InputPhraseAreaList.h"
 
 class ScrollableInputPhraseAreaList
-    : public DesignedQScrollArea
+    : public BasicQScrollArea
 {
     InputPhraseAreaList* _inputPhraseAreaList;
 public:
     explicit ScrollableInputPhraseAreaList(QWidget* parent = nullptr)
-        : DesignedQScrollArea(parent)
+        : BasicQScrollArea(parent)
     {
         _inputPhraseAreaList = new InputPhraseAreaList(this);
 
@@ -19,8 +19,13 @@ public:
         this->show();
     }
 
-    void AddInputPhraseArea(InputPhraseArea* inputPhraseArea)
+    void AddInputPhraseArea(InputPhraseArea* inputPhraseArea) const
     {
         _inputPhraseAreaList->AddInputPhraseArea(inputPhraseArea);
+    }
+
+    void DeleteInputPhraseArea(int index) const
+    {
+        _inputPhraseAreaList->DeleteInputPhraseArea(index);
     }
 };

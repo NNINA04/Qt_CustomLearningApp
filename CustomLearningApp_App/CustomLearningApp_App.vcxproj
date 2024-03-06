@@ -19,8 +19,8 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E72EA5D4-DBD2-4F39-A8D4-095B05AB2648}</ProjectGuid>
     <Keyword>QtVS_v304</Keyword>
-    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.22621.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
     <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -69,18 +69,20 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>$(SolutionDir)</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)QtSharedPCH;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)PhrasesManager_Lib;$(SolutionDir)QtSharedPCH;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
       <AdditionalOptions>/DQTSHAREDPCH_LIB /DBUILD_STATIC %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)QtSharedPCH;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)PhrasesManager_Lib;$(SolutionDir)QtSharedPCH;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>$(SolutionDir)</PrecompiledHeaderOutputFile>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
       <AdditionalOptions>/DQTSHAREDPCH_LIB /DBUILD_STATIC %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -108,6 +110,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PhrasesManager_Lib\PhrasesManager_Lib.vcxproj">
+      <Project>{05accc31-9f44-4b56-98f7-2352e4c26791}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\QtSharedPCH\QtSharedPCH.vcxproj">
       <Project>{7242f1e4-d750-44d9-89d7-abbf3f22f5ea}</Project>
     </ProjectReference>
@@ -118,18 +123,27 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AddPhraseButton.h" />
-    <ClInclude Include="DeletePhraseButton.h" />
-    <ClInclude Include="DesignedQPushButton.h" />
-    <ClInclude Include="DesignedQScrollArea.h" />
-    <ClInclude Include="DesignedQTextEdit.h" />
+    <ClInclude Include="AddInputPhraseAreaButton.h" />
+    <ClInclude Include="TabbedPhrasesRecorders.h" />
+    <QtMoc Include="BasicQTabWidget.h" />
+    <ClInclude Include="DeleteInputPhraseAreaButton.h" />
+    <ClInclude Include="BasicQPushButton.h" />
+    <ClInclude Include="BasicQScrollArea.h" />
+    <QtMoc Include="BasicQTabBar.h" />
+    <ClInclude Include="BasicQTextEdit.h" />
     <ClInclude Include="EnglishLearning.h" />
     <QtMoc Include="InputPhraseArea.h" />
     <QtMoc Include="InputPhraseAreaListManager.h" />
     <ClInclude Include="InputPhraseAreaList.h" />
+    <ClInclude Include="LearningPhrases.h" />
+    <ClInclude Include="MainWindow.h" />
     <ClInclude Include="ScrollableInputPhraseAreaList.h" />
-    <ClInclude Include="StartLearningButton.h" />
-    <QtMoc Include="MainWindow.h" />
+    <ClInclude Include="StartLearningPhrasesButton.h" />
+    <QtMoc Include="PhrasesRecorder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="AddTabButton.png" />
+    <Image Include="DeleteInputPhraseAreaButton.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

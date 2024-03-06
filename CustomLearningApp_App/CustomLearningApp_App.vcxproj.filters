@@ -16,14 +16,20 @@
     <Filter Include="Header Files\Windowses">
       <UniqueIdentifier>{bfac624b-135d-40aa-9d73-ae1b91ee922c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\BaseButtons">
-      <UniqueIdentifier>{2ad22327-06a5-4118-8af5-505f47df81ea}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Windowses\MainWindow">
+    <Filter Include="Header Files\Windowses\PhrasesRecorder">
       <UniqueIdentifier>{63d75d77-97a7-463b-b998-8b7b3ed9873d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Windowses\MainWindow\Buttons">
+    <Filter Include="Header Files\Windowses\LearningPhrases">
+      <UniqueIdentifier>{02431b76-f11f-47a0-9c8c-08d53cb8da14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Buttons">
       <UniqueIdentifier>{f35d5316-b2bf-4559-af9b-10fb1e48bbaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Windowses\TabbedPhrasesRecorders">
+      <UniqueIdentifier>{4d98ad41-2e2b-4db7-a4ff-3201c0643d95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BasicQObjects">
+      <UniqueIdentifier>{2ad22327-06a5-4118-8af5-505f47df81ea}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -32,40 +38,66 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DesignedQPushButton.h">
-      <Filter>Header Files\BaseButtons</Filter>
+    <ClInclude Include="BasicQPushButton.h">
+      <Filter>Header Files\BasicQObjects</Filter>
     </ClInclude>
-    <ClInclude Include="DesignedQTextEdit.h">
-      <Filter>Header Files\BaseButtons</Filter>
+    <ClInclude Include="BasicQTextEdit.h">
+      <Filter>Header Files\BasicQObjects</Filter>
     </ClInclude>
-    <ClInclude Include="AddPhraseButton.h">
-      <Filter>Header Files\Windowses\MainWindow\Buttons</Filter>
+    <ClInclude Include="AddInputPhraseAreaButton.h">
+      <Filter>Header Files\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="DeletePhraseButton.h">
-      <Filter>Header Files\Windowses\MainWindow\Buttons</Filter>
+    <ClInclude Include="DeleteInputPhraseAreaButton.h">
+      <Filter>Header Files\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="StartLearningButton.h">
-      <Filter>Header Files\Windowses\MainWindow\Buttons</Filter>
+    <ClInclude Include="StartLearningPhrasesButton.h">
+      <Filter>Header Files\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="EnglishLearning.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InputPhraseAreaList.h">
-      <Filter>Header Files\Windowses\MainWindow</Filter>
+      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
     </ClInclude>
     <ClInclude Include="ScrollableInputPhraseAreaList.h">
-      <Filter>Header Files\Windowses\MainWindow</Filter>
+      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicQScrollArea.h">
+      <Filter>Header Files\BasicQObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="LearningPhrases.h">
+      <Filter>Header Files\Windowses\LearningPhrases</Filter>
+    </ClInclude>
+    <ClInclude Include="MainWindow.h">
+      <Filter>Header Files\Windowses</Filter>
+    </ClInclude>
+    <ClInclude Include="TabbedPhrasesRecorders.h">
+      <Filter>Header Files\Windowses\TabbedPhrasesRecorders</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="MainWindow.h">
-      <Filter>Header Files\Windowses\MainWindow</Filter>
-    </QtMoc>
     <QtMoc Include="InputPhraseArea.h">
-      <Filter>Header Files\Windowses\MainWindow</Filter>
+      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
     </QtMoc>
     <QtMoc Include="InputPhraseAreaListManager.h">
-      <Filter>Header Files\Windowses\MainWindow</Filter>
+      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
     </QtMoc>
+    <QtMoc Include="PhrasesRecorder.h">
+      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
+    </QtMoc>
+    <QtMoc Include="BasicQTabBar.h">
+      <Filter>Header Files\BasicQObjects</Filter>
+    </QtMoc>
+    <QtMoc Include="BasicQTabWidget.h">
+      <Filter>Header Files\BasicQObjects</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="AddTabButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="DeleteInputPhraseAreaButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

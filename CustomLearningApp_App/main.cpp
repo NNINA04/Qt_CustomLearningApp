@@ -16,6 +16,11 @@ static void PrintWrongAnsweredPhrases(const EnglishLearning::Enumerable& phrases
 }
 */
 
+#pragma region MemoryAnalyzingArea
+#pragma warning(push)
+#pragma warning(disable: 28196)
+#pragma warning(disable: 28251)
+#pragma warning(disable: 6387)
 size_t allocated = 0;
 
 void* operator new(size_t _Size)
@@ -24,19 +29,21 @@ void* operator new(size_t _Size)
     return malloc(_Size);
 }
 
-void __CRTDECL operator delete(void* obj, size_t size)
+void operator delete(void* obj, size_t size)
 {
     allocated -= size;
     qDebug() << allocated;
     free(obj);
 }
+#pragma warning(pop)
+#pragma endregion
 
-int main(int argc, char* argv[])
+int main(int argc, char* argv[]) // Make an insertion an image for learning (to be optional for user)
 {
     /*
     setlocale(LC_ALL, "ru-RU");
     srand((unsigned int)time(NULL));
-    SetConsoleCP(1251);
+    SetConsoleCP(1251); 
     SetConsoleOutputCP(1251);
 
     EnglishLearning::Enumerable phrases
@@ -81,7 +88,7 @@ int main(int argc, char* argv[])
     */
 
     QApplication app(argc, argv);
-    MainWindow englishLearning;
-    englishLearning.show();
+    MainWindow w;
+    w.show();
     return app.exec();
 }

@@ -74,14 +74,14 @@
     <ClCompile>
       <PrecompiledHeaderOutputFile>$(SolutionDir)</PrecompiledHeaderOutputFile>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
-      <AdditionalIncludeDirectories>$(SolutionDir)QtSharedPCH</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)PhrasesManager_Lib;$(SolutionDir)QtSharedPCH;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
       <AdditionalOptions>/DQTSHAREDPCH_LIB /DBUILD_STATIC %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalOptions>/DQTSHAREDPCH_LIB /DBUILD_STATIC %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(SolutionDir)QtSharedPCH</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)PhrasesManager_Lib;$(SolutionDir)QtSharedPCH;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>$(SolutionDir)</PrecompiledHeaderOutputFile>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
@@ -104,7 +104,7 @@
     <ClCompile>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <DebugInformationFormat>None</DebugInformationFormat>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
       <Optimization>MaxSpeed</Optimization>
       <PreprocessorDefinitions>PHRASESMANAGER_LIB_LIB;BUILD_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
