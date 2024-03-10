@@ -69,7 +69,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>$(SolutionDir)</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)PhrasesManager_Lib;$(SolutionDir)QtSharedPCH;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)DataStorage_Lib;$(SolutionDir)PhrasesManager_Lib;$(SolutionDir)QtSharedPCH;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
       <AdditionalOptions>/DQTSHAREDPCH_LIB /DBUILD_STATIC %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp14</LanguageStandard>
@@ -77,7 +77,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)PhrasesManager_Lib;$(SolutionDir)QtSharedPCH;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)DataStorage_Lib;$(SolutionDir)PhrasesManager_Lib;$(SolutionDir)QtSharedPCH;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>$(SolutionDir)</PrecompiledHeaderOutputFile>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
@@ -132,12 +132,12 @@
     <QtMoc Include="BasicQTabBar.h" />
     <ClInclude Include="BasicQTextEdit.h" />
     <ClInclude Include="EnglishLearning.h" />
-    <QtMoc Include="InputPhraseArea.h" />
-    <QtMoc Include="InputPhraseAreaListManager.h" />
-    <ClInclude Include="InputPhraseAreaList.h" />
+    <QtMoc Include="PhrasesEntering.h" />
+    <QtMoc Include="PhrasesEnteringListManager.h" />
+    <ClInclude Include="PhrasesEnteringList.h" />
     <ClInclude Include="LearningPhrases.h" />
     <ClInclude Include="MainWindow.h" />
-    <ClInclude Include="ScrollableInputPhraseAreaList.h" />
+    <ClInclude Include="ScrollablePhrasesEnteringList.h" />
     <ClInclude Include="StartLearningPhrasesButton.h" />
     <QtMoc Include="PhrasesRecorder.h" />
   </ItemGroup>

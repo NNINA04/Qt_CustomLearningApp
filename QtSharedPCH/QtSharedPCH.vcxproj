@@ -69,12 +69,14 @@
     <ClCompile>
       <PrecompiledHeaderOutputFile>$(SolutionDir)</PrecompiledHeaderOutputFile>
       <AdditionalOptions>/DQTSHAREDPCH_LIB /DBUILD_STATIC %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeaderOutputFile>$(SolutionDir)</PrecompiledHeaderOutputFile>
       <AdditionalOptions>/DQTSHAREDPCH_LIB /DBUILD_STATIC %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">

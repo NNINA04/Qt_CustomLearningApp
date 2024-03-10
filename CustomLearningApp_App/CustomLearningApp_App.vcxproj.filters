@@ -56,12 +56,6 @@
     <ClInclude Include="EnglishLearning.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InputPhraseAreaList.h">
-      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
-    </ClInclude>
-    <ClInclude Include="ScrollableInputPhraseAreaList.h">
-      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
-    </ClInclude>
     <ClInclude Include="BasicQScrollArea.h">
       <Filter>Header Files\BasicQObjects</Filter>
     </ClInclude>
@@ -74,12 +68,15 @@
     <ClInclude Include="TabbedPhrasesRecorders.h">
       <Filter>Header Files\Windowses\TabbedPhrasesRecorders</Filter>
     </ClInclude>
+    <ClInclude Include="PhrasesEnteringList.h">
+      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrollablePhrasesEnteringList.h">
+      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="InputPhraseArea.h">
-      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
-    </QtMoc>
-    <QtMoc Include="InputPhraseAreaListManager.h">
+    <QtMoc Include="PhrasesEnteringListManager.h">
       <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
     </QtMoc>
     <QtMoc Include="PhrasesRecorder.h">
@@ -90,6 +87,9 @@
     </QtMoc>
     <QtMoc Include="BasicQTabWidget.h">
       <Filter>Header Files\BasicQObjects</Filter>
+    </QtMoc>
+    <QtMoc Include="PhrasesEntering.h">
+      <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

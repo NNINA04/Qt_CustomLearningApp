@@ -6,14 +6,14 @@ class EnglishLearning
 public:
     using Enumerable = std::set<std::pair<std::string, std::string>>;
 private:
-    Enumerable _phrases;
+    Enumerable _phrasesEnterings;
     Enumerable _wrongAnsweredPhrases;
     Enumerable::iterator _akedPhrase;
 public:
     bool AsksEnglish = true;
 
-    EnglishLearning(Enumerable _phrases) 
-        : _phrases(_phrases)
+    EnglishLearning(Enumerable _phrasesEnterings) 
+        : _phrasesEnterings(_phrasesEnterings)
     {
     }
 
@@ -27,12 +27,12 @@ public:
 
         std::cout << askedPhrase << std::endl;
         Answer();
-        _phrases.erase(_akedPhrase);
+        _phrasesEnterings.erase(_akedPhrase);
     }
 
     bool empty()
     {
-        return _phrases.empty();
+        return _phrasesEnterings.empty();
     }
 
     const Enumerable& GetWrongAnsweredPhrases() const
@@ -42,8 +42,8 @@ public:
 private:
     void SetAskedPhrase()
     {
-        int randomNumber = rand() % _phrases.size();
-        auto beginIter = begin(_phrases);
+        int randomNumber = rand() % _phrasesEnterings.size();
+        auto beginIter = begin(_phrasesEnterings);
         _akedPhrase = next(beginIter, randomNumber);
     }
 

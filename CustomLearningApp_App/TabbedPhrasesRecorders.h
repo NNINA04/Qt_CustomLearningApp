@@ -2,6 +2,7 @@
 
 #include "BasicQTabWidget.h"
 #include "PhrasesRecorder.h"
+#include "LocalDataStorage.h"
 
 class TabbedPhrasesRecorders
     : public QWidget

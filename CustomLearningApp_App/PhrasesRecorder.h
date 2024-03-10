@@ -2,7 +2,7 @@
 
 #include "AddInputPhraseAreaButton.h"
 #include "StartLearningPhrasesButton.h"
-#include "InputPhraseAreaListManager.h"
+#include "PhrasesEnteringListManager.h"
 #include "LearningPhrases.h"
 
 class PhrasesRecorder
@@ -12,7 +12,7 @@ class PhrasesRecorder
 
     QVBoxLayout* _vBoxLayout;
     QPushButton* _startLearningButton;
-    InputPhraseAreaListManager* _learnedPhrasesListManager;
+    PhrasesEnteringListManager* _phrasesEnteringListManager;
 public:
     explicit PhrasesRecorder(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags())
         : QWidget(parent, f)
@@ -21,18 +21,20 @@ public:
 
         _vBoxLayout = new QVBoxLayout(this);
         _startLearningButton = new StartLearningPhrasesButton("Start learning", this);
-        _learnedPhrasesListManager = new InputPhraseAreaListManager(QIcon("DeleteInputPhraseAreaButton.png"), this);
+        _phrasesEnteringListManager = new PhrasesEnteringListManager(this);
 
         _vBoxLayout->setMargin(5);
         _vBoxLayout->addWidget(_startLearningButton);
-        _vBoxLayout->addWidget(_learnedPhrasesListManager);
+        _vBoxLayout->addWidget(_phrasesEnteringListManager);
 
+        ScrollablePhrasesEnteringList* scrollablePhrasesEnteringList = _phrasesEnteringListManager->GetScrollablePhrasesEnteringList();
+        PhrasesEnteringList* phrasesEnteringList = scrollablePhrasesEnteringList->GetPhrasesEnteringList();
         for (size_t i = 0; i < 3; ++i)
-            _learnedPhrasesListManager->AddInputPhraseArea(new InputPhraseArea());
+            phrasesEnteringList->AddPhrasesEntering(new PhrasesEntering());
     }
 
-    void ConnectStartLearningButton_Clicked(void *slot())
+    PhrasesEnteringListManager* GetPhrasesEnteringListManager() 
     {
-        connect(_startLearningButton, &QPushButton::clicked, slot);
+        return _phrasesEnteringListManager;
     }
 };
