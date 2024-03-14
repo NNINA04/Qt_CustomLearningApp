@@ -124,7 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddInputPhraseAreaButton.h" />
-    <ClInclude Include="TabbedPhrasesRecorders.h" />
+    <ClInclude Include="PhrasesRecorderTabs.h" />
     <QtMoc Include="BasicQTabWidget.h" />
     <ClInclude Include="DeleteInputPhraseAreaButton.h" />
     <ClInclude Include="BasicQPushButton.h" />

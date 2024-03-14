@@ -65,14 +65,14 @@
     <ClInclude Include="MainWindow.h">
       <Filter>Header Files\Windowses</Filter>
     </ClInclude>
-    <ClInclude Include="TabbedPhrasesRecorders.h">
-      <Filter>Header Files\Windowses\TabbedPhrasesRecorders</Filter>
-    </ClInclude>
     <ClInclude Include="PhrasesEnteringList.h">
       <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
     </ClInclude>
     <ClInclude Include="ScrollablePhrasesEnteringList.h">
       <Filter>Header Files\Windowses\PhrasesRecorder</Filter>
+    </ClInclude>
+    <ClInclude Include="PhrasesRecorderTabs.h">
+      <Filter>Header Files\Windowses\TabbedPhrasesRecorders</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

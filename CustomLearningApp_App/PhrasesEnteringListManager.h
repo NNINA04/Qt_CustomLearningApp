@@ -33,6 +33,6 @@ private slots:
     void AddInputPhraseAreaButton_Clicked() const
     {
         PhrasesEnteringList* phrasesEnteringList = this->_scrollableInputPhraseAreaList->GetPhrasesEnteringList();
-        phrasesEnteringList->AddPhrasesEntering(new PhrasesEntering()); // QIcon("DeleteInputPhraseAreaButton.png")
+        phrasesEnteringList->AddPhrasesEntering(new PhrasesEntering());
     }
 };

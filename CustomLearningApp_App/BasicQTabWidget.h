@@ -2,7 +2,6 @@
 
 #include "BasicQTabBar.h"
 
-
 class BasicQTabWidget
     : public QTabWidget
 {
@@ -10,13 +9,10 @@ class BasicQTabWidget
 
     QPushButton* _addTabButton;
 
-    QWidget* (*_basicTabCreator)();
-
     int _createdTabs = 0;
 public:
-    BasicQTabWidget(QWidget* (*basicTabCreator)(), QWidget* parent = nullptr)
+    BasicQTabWidget(QWidget* parent = nullptr)
         : QTabWidget(parent)
-        , _basicTabCreator(basicTabCreator)
     {
         _addTabButton = new QPushButton(QIcon("AddTabButton.png"), QString(), this);
 
@@ -25,29 +21,18 @@ public:
         this->setTabsClosable(true);
         this->setMovable(true);
 
-        auto t = []()->QWidget* { return nullptr; };
-        void (*ptr)() = []() {};
-
         connect(_addTabButton, SIGNAL(clicked(bool)), this, SLOT(AddTabButton_Clicked(bool)));
     }
 
-    auto GetBasicTabCreator() const
+    void AddTabBasedOnAdding()
     {
-        return _basicTabCreator;
+        this->addTab(this->MakeTabBasedOnAdding(), QString("Tab %1").arg(++_createdTabs));
     }
 
-    void SetBasicTabCreator(QWidget* (*basicTabCreator)())
-    {
-        _basicTabCreator = basicTabCreator;
-    }
-
-    void AddBasicTab()
-    {
-        this->addTab(_basicTabCreator(), QString("Tab %1").arg(++_createdTabs));
-    }
+    virtual QWidget* MakeTabBasedOnAdding() = 0;
 private slots:
     void AddTabButton_Clicked(bool checked = false)
     {
-        this->AddBasicTab();
+        AddTabBasedOnAdding();
     }
 };

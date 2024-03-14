@@ -16,11 +16,12 @@ public:
         _phrasesEnterings = new QVector<PhrasesEntering*>();
 
         _vBoxLayout->setMargin(0);
+        _vBoxLayout->addStretch();
     }
 
     void AddPhrasesEntering(PhrasesEntering* phrasesEnterign)
     {
-        _vBoxLayout->addWidget(phrasesEnterign);
+        _vBoxLayout->insertWidget(_vBoxLayout->count() - 1, phrasesEnterign, 0, Qt::AlignmentFlag::AlignTop);
         _phrasesEnterings->push_back(phrasesEnterign);
     }
 
@@ -30,7 +31,7 @@ public:
         _phrasesEnterings->removeAt(index);
     }
 
-    void Clear() 
+    void Clear()
     {
         size_t size = _phrasesEnterings->size();
         for (size_t i = 0; i < size; ++i)
@@ -40,5 +41,10 @@ public:
     const QVector<PhrasesEntering*>* GetPhrasesEnterings()
     {
         return _phrasesEnterings;
+    }
+
+    ~PhrasesEnteringList()
+    {
+        delete _phrasesEnterings;
     }
 };

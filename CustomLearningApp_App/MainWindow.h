@@ -1,16 +1,18 @@
 #pragma once
 
-#include "TabbedPhrasesRecorders.h"
+#include "PhrasesRecorderTabs.h"
 
 class MainWindow
     : public QMainWindow
 {
-    TabbedPhrasesRecorders* _tabbedPhrasesRecorder;
+    BasicQTabWidget* _tabWidget;
 public:
     MainWindow(QWidget* parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags())
         : QMainWindow(parent, flags)
     {
-        _tabbedPhrasesRecorder = new TabbedPhrasesRecorders();
-        this->setCentralWidget(_tabbedPhrasesRecorder);
+        _tabWidget = new PhrasesRecorderTabs(this);
+        _tabWidget->AddTabBasedOnAdding();
+        this->setCentralWidget(_tabWidget);
+        _tabWidget->show();
     }
 };

@@ -32,17 +32,6 @@ public:
 
         connect(_destroyButton, SIGNAL(clicked()), this, SLOT(DestrouButton_Clicked()));
     }
-
-    void SetPhrases(Phrases* inputData) const
-    {
-        _leftPhrase->setText(inputData->first);
-        _rightPhrase->setText(inputData->second);
-    }
-
-    Phrases* GetPhrases() const
-    {
-        return new QPair<QString, QString>{ _leftPhrase->placeholderText(), _rightPhrase->placeholderText() };
-    }
 private slots:
     void DestrouButton_Clicked() const
     {
